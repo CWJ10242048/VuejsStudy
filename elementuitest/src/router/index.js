@@ -1,6 +1,6 @@
 import {
 	createRouter,
-	createWebHashHistory
+	createWebHistory
 } from 'vue-router'
 import HelloWorld from "../components/HelloWorld"
 import OptionOne from "../components/OptionOne"
@@ -31,7 +31,7 @@ const routes = [{
 }];
 
 const router = createRouter({
-	history:createWebHashHistory(process.env.BASE_URL),
+	history:createWebHistory(process.env.BASE_URL),
 	routes,
 	mode: 'history',
 });
