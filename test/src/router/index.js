@@ -1,15 +1,19 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import HelloWorld from '../components/HelloWorld.vue'; // 示例组件路径，请根据实际情况调整
-import OptionOne from '../components/OptionOne.vue'; // 示例组件路径，请根据实际情况调整
-import OptionTwo from '../components/OptionTwo.vue'; // 示例组件路径，请根据实际情况调整
-import OptionThree from '../components/OptionThree.vue'; // 示例组件路径，请根据实际情况调整
-import OptionFour from '../components/OptionFour.vue'; // 示例组件路径，请根据实际情况调整
+import UserLogin from '../components/UserLogin.vue';
+import OptionOne from '../components/OptionOne.vue';
+import OptionTwo from '../components/OptionTwo.vue';
+import OptionThree from '../components/OptionThree.vue';
+import OptionFour from '../components/OptionFour.vue';
 
 const routes = [
   {
     path: '/',
-    name: 'HelloWorld',
-    component: HelloWorld
+    redirect: '/login'
+  },
+  {
+    path: '/login',
+    name: 'UserLogin',
+    component: UserLogin
   },
   {
     path: '/optionOne',
@@ -31,7 +35,6 @@ const routes = [
     name: 'OptionFour',
     component: OptionFour
   }
-  // 其他路由配置
 ];
 
 const router = createRouter({
